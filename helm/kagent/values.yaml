@@ -534,6 +534,12 @@ ui:
 # https://kagent.dev/docs/getting-started/configuring-providers
 
 providers:
+  # -- Create the default ModelConfig (and its API key Secret when apiKey is set)
+  # from the provider selected below. Set to false to skip creating them and
+  # manage ModelConfig resources yourself; agents that don't specify a
+  # modelConfig fall back to one named "default-model-config", so create one
+  # with that name (or set modelConfig on every agent).
+  create: true
   default: openAI
   openAI:
     provider: OpenAI
